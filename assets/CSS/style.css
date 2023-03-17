@@ -1,0 +1,25 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.cell{
+width: calc(100% / 8);
+aspect-ratio: 1;
+border: solid 0.1px;
+
+}
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    width: 1200px;
+    margin: auto;
+}
+.bg_green{
+    background-color: rgb(47, 255, 227);
+}
+.text_center{
+align-items: center;
+justify-content: center;
+display: flex;
+}
