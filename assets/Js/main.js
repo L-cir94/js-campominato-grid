@@ -26,22 +26,26 @@ divise in 7 caselle per 7 righe;
 
 */
 
+//selezionare un nodo della DOM nel quale mettere le 100 celle
+const containerEl = document.querySelector('.container')
+//ciclo n volte pre generare n celle 
+let maxCellNumb = 100
+//ciclo n volte pre generare n celle 
+for (let i = 0; i < maxCellNumb; i++) {
+    //per ciascuna iterazione devo generare il markup per ogni singola cella
+    const cellMarkup = `<div class="cell text_center"></div>`;
+    containerEl.innerHTML += cellMarkup
 
+}
 
+const cells = document.querySelectorAll('.cell')
+console.log(cells);
 
+for (let i = 0; i < cells.length; i++) {
+   const thisCell = cells[i]
+   console.log(thisCell)
+   thisCell.addEventListener('click', function () {
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    this.classList.toggle('bg_light_blue')
+   }
+)}
