@@ -54,6 +54,3 @@ reset.addEventListener('click', function(){
     containerEl.innerHTML = ''
 })
 
-if () {
-    
-}
