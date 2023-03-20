@@ -27,7 +27,7 @@ divise in 7 caselle per 7 righe;
 
 */
 
-let cellNumb = 100
+
 const containerEl = document.querySelector('.container')
 const play = document.querySelector('.play');
 const reset = document.querySelector('.reset');
@@ -36,8 +36,14 @@ const reset = document.querySelector('.reset');
 //Ogni cella ha un numero progressivo, da 1 a 100.
 //Ci saranno quindi 10 caselle per ognuna delle 10 righe.
 play.addEventListener('click', function () {
+
+    // recupero del valore selezionato
+let selectDaVerificare = document.getElementById("selectDaVerificare");
+let indiceSelezionato = selectDaVerificare.selectedIndex;
+let valoreSelezionato = selectDaVerificare.options[indiceSelezionato].value;
+console.log(valoreSelezionato);
     containerEl.innerHTML = "";
-    for (let i = 1; i <= cellNumb; i++) {
+    for (let i = 1; i <= valoreSelezionato; i++) {
         const divEl = document.createElement('div')
         divEl.append(i)
         containerEl.append(divEl)
