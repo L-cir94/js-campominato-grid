@@ -26,17 +26,22 @@ divise in 7 caselle per 7 righe;
 /* strumenti
 
 */
+cellNumb = 100
 const containerEl = document.querySelector('.container')
 const play = document.querySelector('.play');
 const reset = document.querySelector('.reset');
+
 //L'utente clicca su un bottone che genererà una griglia di gioco quadrata.
 //Ogni cella ha un numero progressivo, da 1 a 100.
 //Ci saranno quindi 10 caselle per ognuna delle 10 righe.
 play.addEventListener('click', function () {
-    for (let i = 1; i <= 100; i++) {
+    containerEl.innerHTML = "";
+    for (let i = 1; i <= cellNumb; i++) {
         const divEl = document.createElement('div')
         divEl.append(i)
         containerEl.append(divEl)
+        /*Quando l'utente clicca su ogni cella, la cella cliccata si colora di azzurro 
+        ed emetto un messaggio in console con il numero della cella cliccata.*/
         divEl.addEventListener('click', function(){
             console.log('è la cella numero:',i)
             this.classList.toggle('bg_light_blue')

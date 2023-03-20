@@ -60,9 +60,6 @@ footer a{
     color: var(--purple);
     text-decoration: underline;
 }
-.play{
-    margin-top: 1rem;
-}
 .container > div{
     display: flex;
     width: calc((100% /10 ));
