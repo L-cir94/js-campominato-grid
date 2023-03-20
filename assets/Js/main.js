@@ -37,8 +37,14 @@ play.addEventListener('click', function () {
         const divEl = document.createElement('div')
         divEl.append(i)
         containerEl.append(divEl)
+        divEl.addEventListener('click', function(){
+            console.log('è la cella numero:',i)
+            this.classList.toggle('bg_light_blue')
+        })
     }
+
 })
 reset.addEventListener('click', function(){
     containerEl.innerHTML = ''
 })
+
