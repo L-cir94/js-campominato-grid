@@ -41,18 +41,25 @@ play.addEventListener('click', function () {
 let selectDaVerificare = document.getElementById("selectDaVerificare");
 let indiceSelezionato = selectDaVerificare.selectedIndex;
 let valoreSelezionato = selectDaVerificare.options[indiceSelezionato].value;
-console.log(valoreSelezionato);
+console.log(`hai scelto di generare: ${valoreSelezionato} celle`);
     containerEl.innerHTML = "";
     for (let i = 1; i <= valoreSelezionato; i++) {
         const divEl = document.createElement('div')
         divEl.append(i)
         containerEl.append(divEl)
+       
         /*Quando l'utente clicca su ogni cella, la cella cliccata si colora di azzurro 
         ed emetto un messaggio in console con il numero della cella cliccata.*/
         divEl.addEventListener('click', function(){
-            console.log('è la cella numero:',i)
+            console.log('quella cliccata è la cella numero:',i)
             this.classList.toggle('bg_light_blue')
         })
+        if (valoreSelezionato == 49) {
+            divEl.style.width = `calc(100% / ${Math.sqrt(valoreSelezionato)} )`
+        }
+        if (valoreSelezionato == 81) {
+            divEl.style.width = `calc(100% / ${Math.sqrt(valoreSelezionato)} )`
+        }
     }
 
 })
