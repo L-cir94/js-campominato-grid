@@ -41,7 +41,8 @@ play.addEventListener('click', function () {
 let selectDaVerificare = document.getElementById("selectDaVerificare");
 let indiceSelezionato = selectDaVerificare.selectedIndex;
 let valoreSelezionato = selectDaVerificare.options[indiceSelezionato].value;
-console.log(`hai scelto di generare: ${valoreSelezionato} celle`);
+let nomeLivello = selectDaVerificare.options[indiceSelezionato].text;
+console.log(`hai scelto il livello ${nomeLivello} che genera ${valoreSelezionato} celle`);
     containerEl.innerHTML = "";
     for (let i = 1; i <= valoreSelezionato; i++) {
         const divEl = document.createElement('div')
