@@ -27,11 +27,6 @@
         --light: #f8f9fa;
         --dark: #343a40;
 }
-.cell{
-width: calc(100% / 10);
-aspect-ratio: 1;
-border: dashed;
-}
 .wm{
     width: 1200px;
     margin: auto;
@@ -67,4 +62,12 @@ footer a{
 }
 .play{
     margin-top: 1rem;
+}
+.container > div{
+    display: flex;
+    width: calc((100% /10 ));
+    aspect-ratio: 1/1;
+    align-items: center;
+    justify-content: center;
+    border: solid 1px;
 }
