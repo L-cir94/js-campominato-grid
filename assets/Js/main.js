@@ -26,7 +26,8 @@ divise in 7 caselle per 7 righe;
 /* strumenti
 
 */
-cellNumb = 100
+
+let cellNumb = 100
 const containerEl = document.querySelector('.container')
 const play = document.querySelector('.play');
 const reset = document.querySelector('.reset');
@@ -53,3 +54,6 @@ reset.addEventListener('click', function(){
     containerEl.innerHTML = ''
 })
 
+if () {
+    
+}
