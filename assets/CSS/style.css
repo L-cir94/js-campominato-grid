@@ -55,7 +55,7 @@ header button{
 }
 main{
     background-color: rgb(184, 255, 255);
-    min-height: 75vh;
+    min-height: 77vh;
 }
 footer a{
     color: var(--purple);
