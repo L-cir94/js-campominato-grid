@@ -27,14 +27,18 @@ divise in 7 caselle per 7 righe;
 
 */
 const containerEl = document.querySelector('.container')
+const play = document.querySelector('.play');
+const reset = document.querySelector('.reset');
 //L'utente clicca su un bottone che genererà una griglia di gioco quadrata.
 //Ogni cella ha un numero progressivo, da 1 a 100.
 //Ci saranno quindi 10 caselle per ognuna delle 10 righe.
-button.addEventListener('click', function () {
+play.addEventListener('click', function () {
     for (let i = 1; i <= 100; i++) {
-        const divEl =document.createElement('div')
-            console.log(i)
-            divEl.append(i)
-            containerEl.append(divEl)
-        }
+        const divEl = document.createElement('div')
+        divEl.append(i)
+        containerEl.append(divEl)
+    }
+})
+reset.addEventListener('click', function(){
+    containerEl.innerHTML = ''
 })
